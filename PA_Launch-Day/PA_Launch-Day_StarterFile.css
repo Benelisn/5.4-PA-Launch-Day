@@ -1,0 +1,237 @@
+/* =========================================
+     CYBER THEME PROVIDED
+     YOU MAY EDIT THIS FILE
+========================================= */
+
+/* =========================================
+     Author: Joshua Farr
+     Date: 11/7/2026
+     Purpose: Styles for the Satellite Uplink Command Center. Ground Standby Mode (default) uses a charcoal background when offline. Uplink Mode uses a dark background when online.
+========================================= */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	transition: .5s;
+}
+
+header,
+footer {
+	padding: 1.5rem;
+	text-align: center;
+}
+
+main {
+	max-width: 1000px;
+	margin: auto;
+	padding: 2rem;
+}
+
+section,
+aside {
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+article {
+	margin-top: 1.5rem;
+}
+
+/* =========================================
+     NAV
+========================================= */
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	margin-top: 1rem;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	text-decoration: underline;
+}
+
+/* =========================================
+     HERO
+========================================= */
+
+#hero {
+	text-align: center;
+	padding: 4rem 2rem;
+}
+
+#heroTitle {
+	font-size: 3rem;
+}
+
+#heroText {
+	margin-top: 1rem;
+	font-size: 1.1rem;
+}
+
+/* =========================================
+     BUTTONS
+========================================= */
+
+button {
+	margin-top: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+button:hover,
+button:focus {
+	transform: translateY(-2px);
+}
+
+/* =========================================
+     GROUND STANDBY MODE (default, offline)
+     Charcoal background, cool blue text and accents
+========================================= */
+
+body {
+	background-color: #1e2124;
+	color: #b8cfe6;
+}
+
+header,
+footer {
+	background-color: #15171a;
+	border-bottom: 3px solid #4a90c2;
+}
+
+footer {
+	border-top: 3px solid #4a90c2;
+	border-bottom: none;
+}
+
+h1,
+h2,
+h3 {
+	color: #7fb8e6;
+}
+
+nav a {
+	color: #9ecdf0;
+}
+
+#heroTitle {
+	color: #7fb8e6;
+	text-shadow: 0 0 8px rgba(74, 144, 194, 0.4);
+}
+
+section,
+aside {
+	background-color: #262a2e;
+	border: 1px solid #3a4652;
+	border-left: 6px solid #4a90c2;
+	border-radius: 10px;
+}
+
+#connectionStatus {
+	color: #6fa8d6;
+	font-weight: bold;
+}
+
+button {
+	background-color: #2f3b47;
+	color: #d6e8f7;
+	border: 2px solid #4a90c2;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+button:hover,
+button:focus {
+	background-color: #4a90c2;
+	color: #15171a;
+}
+
+/* =========================================
+     UPLINK MODE (live)
+     Dark background, warm orange and gold text and accents
+========================================= */
+
+body.uplink-mode {
+	background-color: #140c08;
+	color: #ffe0c2;
+}
+
+.uplink-mode header,
+.uplink-mode footer {
+	background-color: #0d0705;
+	border-color: #ff8c32;
+}
+
+.uplink-mode h1,
+.uplink-mode h2,
+.uplink-mode h3 {
+	color: #ffb347;
+}
+
+.uplink-mode nav a {
+	color: #ffc970;
+}
+
+.uplink-mode #heroTitle {
+	color: #ffb347;
+	text-shadow: 0 0 14px rgba(255, 140, 50, 0.7);
+}
+
+.uplink-mode section,
+.uplink-mode aside {
+	background-color: #1f130c;
+	border-color: #5c3420;
+	border-left-color: #ff8c32;
+}
+
+.uplink-mode #connectionStatus {
+	color: #ffd166;
+}
+
+.uplink-mode button {
+	background-color: #3a1f10;
+	color: #ffe0c2;
+	border-color: #ff8c32;
+}
+
+.uplink-mode button:hover,
+.uplink-mode button:focus {
+	background-color: #ff8c32;
+	color: #140c08;
+}
+
+button:focus-visible,
+nav a:focus-visible {
+	outline: 3px solid #ffd166;
+	outline-offset: 3px;
+}
+
+/* =========================================
+     RESPONSIVE
+========================================= */
+
+@media(max-width:768px) {
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	#heroTitle {
+		font-size: 2rem;
+	}
+
+}
